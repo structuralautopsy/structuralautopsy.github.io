@@ -1,0 +1,81 @@
+:root{
+  --ink:#141414; --paper:#faf9f7; --muted:#6b6b6b; --line:#e2ddd5;
+  --accent:#8a2f2f; --accent2:#1a4f7a; --card:#ffffff; --code:#f0ece5;
+  --maxw:760px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  line-height:1.85; font-size:17px;
+}
+a{color:var(--accent2); text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 22px}
+
+/* header */
+.site-head{border-bottom:1px solid var(--line); background:var(--paper)}
+.site-head .wrap{display:flex; align-items:baseline; justify-content:space-between; padding-top:20px; padding-bottom:18px; flex-wrap:wrap; gap:8px}
+.brand{font-weight:700; font-size:20px; letter-spacing:.02em; color:var(--ink); text-decoration:none; display:inline-block}
+.brand:hover{text-decoration:none; opacity:.7}
+.brand small{display:block; font-weight:400; font-size:12px; letter-spacing:.18em; color:var(--muted); text-transform:uppercase; margin-top:2px}
+.nav a{margin-left:18px; font-size:14px; color:var(--muted)}
+.nav a:hover{color:var(--ink)}
+
+/* hero */
+.hero{padding:64px 0 40px; border-bottom:1px solid var(--line)}
+.hero h1{font-size:30px; line-height:1.5; margin:0 0 18px; font-weight:700}
+.hero .lead{font-size:18px; color:var(--ink); margin:0 0 10px}
+.hero .sub{font-size:15px; color:var(--accent); font-weight:700; margin:0}
+.hero .en{font-size:12px; letter-spacing:.22em; color:var(--muted); text-transform:uppercase; margin:0 0 22px}
+
+/* sections */
+section{padding:38px 0; border-bottom:1px solid var(--line)}
+h2{font-size:21px; font-weight:700; margin:0 0 16px; display:flex; align-items:center; gap:10px}
+h2::before{content:""; width:18px; height:2px; background:var(--accent); display:inline-block}
+h3{font-size:16px; margin:26px 0 6px}
+p{margin:0 0 14px}
+.muted{color:var(--muted); font-size:14px}
+
+/* shelf grid */
+.shelves{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:8px}
+.shelf{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px 18px}
+.shelf .n{font-size:12px; letter-spacing:.14em; color:var(--accent); font-weight:700}
+.shelf h4{margin:4px 0 6px; font-size:15px}
+.shelf p{margin:0; font-size:13.5px; color:var(--muted); line-height:1.7}
+@media(max-width:620px){.shelves{grid-template-columns:1fr}}
+
+/* article card list */
+.entry{display:block; background:var(--card); border:1px solid var(--line); border-radius:12px; padding:20px 22px; margin-bottom:14px}
+.entry:hover{border-color:var(--accent2); text-decoration:none}
+.entry .tag{font-size:12px; letter-spacing:.12em; color:var(--muted)}
+.entry h3{margin:6px 0 6px; color:var(--ink); font-size:18px}
+.entry p{margin:0; color:var(--muted); font-size:14px}
+
+/* callout */
+.callout{background:var(--code); border-radius:12px; padding:16px 20px; font-size:14.5px}
+.callout strong{color:var(--accent)}
+
+/* buttons */
+.btn{display:inline-block; background:var(--ink); color:#fff; padding:11px 22px; border-radius:999px; font-size:14px; font-weight:700}
+.btn:hover{background:var(--accent); text-decoration:none}
+
+/* article body */
+.article{padding:44px 0}
+.article h1{font-size:27px; line-height:1.5; margin:0 0 6px}
+.article .kicker{font-size:12px; letter-spacing:.2em; color:var(--accent); text-transform:uppercase; margin:0 0 20px}
+.article h2{font-size:20px; margin-top:38px}
+.article h3{font-size:17px; margin-top:28px; border-left:3px solid var(--accent); padding-left:10px}
+.article img{max-width:100%; height:auto; display:block; margin:22px auto; border:1px solid var(--line); border-radius:8px}
+.article table{border-collapse:collapse; width:100%; font-size:13px; margin:20px 0}
+.article th,.article td{border:1px solid var(--line); padding:7px 9px; text-align:left; vertical-align:top}
+.article th{background:var(--code); font-weight:700}
+.article blockquote{margin:0 0 16px; padding:10px 16px; background:var(--code); border-radius:8px; color:var(--muted); font-size:14px}
+.article hr{border:0; border-top:1px solid var(--line); margin:32px 0}
+.article code{background:var(--code); padding:1px 5px; border-radius:4px; font-size:.92em}
+.spoiler{background:var(--accent); color:#fff; padding:10px 16px; border-radius:8px; font-size:14px; font-weight:700; margin:0 0 24px}
+
+/* footer */
+.site-foot{padding:34px 0 60px; color:var(--muted); font-size:13px}
+.site-foot a{color:var(--muted); text-decoration:underline}
